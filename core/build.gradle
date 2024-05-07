@@ -1,7 +1,5 @@
-
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-apply plugin: 'signing'
 
 android {
     compileSdk 30
@@ -26,15 +24,6 @@ android {
     }
 }
 
-//以下是为了找到android.os.SystemProperties这个隐藏的类
-String SDK_DIR = System.getenv("ANDROID_SDK_HOME")
-//("TAG", "SDK_DIR = " + SDK_DIR );
-if (SDK_DIR == null) {
-    Properties props = new Properties()
-    props.load(new FileInputStream(project.rootProject.file("local.properties")))
-    SDK_DIR = props.get('sdk.dir');
-}
-
 dependencies {
     compileOnly files('libs/classes.jar')
     compileOnly "androidx.annotation:annotation:1.1.0"
@@ -42,7 +31,6 @@ dependencies {
     compileOnly "androidx.viewpager:viewpager:1.0.0"
     compileOnly "androidx.recyclerview:recyclerview:1.1.0-beta04"
     compileOnly 'com.google.android.material:material:1.10.0'
-    compileOnly files("${SDK_DIR}/platforms/android-21/data/layoutlib.jar")
 }
 
 afterEvaluate {
