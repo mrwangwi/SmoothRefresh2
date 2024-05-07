@@ -1,0 +1,42 @@
+R_DEF: Internal format may change without notice
+local
+attr? sr_backToKeepDuration
+attr? sr_backToKeepFooterDuration
+attr? sr_backToKeepHeaderDuration
+attr? sr_closeDuration
+attr? sr_closeFooterDuration
+attr? sr_closeHeaderDuration
+attr? sr_content
+attr? sr_enableKeep
+attr? sr_enableLoadMore
+attr? sr_enableOverScroll
+attr? sr_enablePinContent
+attr? sr_enablePullToRefresh
+attr? sr_enableRefresh
+attr? sr_maxMoveRatio
+attr? sr_maxMoveRatioOfFooter
+attr? sr_maxMoveRatioOfHeader
+attr? sr_mode
+attr? sr_ratioOfFooterToRefresh
+attr? sr_ratioOfHeaderToRefresh
+attr? sr_ratioToKeep
+attr? sr_ratioToKeepFooter
+attr? sr_ratioToKeepHeader
+attr? sr_ratioToRefresh
+attr? sr_resistance
+attr? sr_resistanceOfFooter
+attr? sr_resistanceOfHeader
+attr? sr_stickyFooter
+attr? sr_stickyHeader
+attr sr_style
+id mode_default
+id mode_scale
+id style_default
+id style_followCenter
+id style_followPin
+id style_followScale
+id style_pin
+id style_scale
+styleable IRefreshView sr_style
+styleable SmoothRefreshLayout android:enabled sr_content sr_resistance sr_resistanceOfFooter sr_resistanceOfHeader sr_ratioToRefresh sr_ratioOfHeaderToRefresh sr_ratioOfFooterToRefresh sr_ratioToKeep sr_ratioToKeepHeader sr_ratioToKeepFooter sr_maxMoveRatio sr_maxMoveRatioOfHeader sr_maxMoveRatioOfFooter sr_closeDuration sr_closeHeaderDuration sr_closeFooterDuration sr_backToKeepDuration sr_backToKeepHeaderDuration sr_backToKeepFooterDuration sr_enablePullToRefresh sr_enableKeep sr_enableOverScroll sr_enablePinContent sr_enableRefresh sr_enableLoadMore sr_stickyHeader sr_stickyFooter sr_mode
+styleable SmoothRefreshLayout_Layout android:layout_gravity

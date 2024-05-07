@@ -1,0 +1,41 @@
+me.dkzwm.widget.srl
+attr sr_backToKeepDuration
+attr sr_backToKeepFooterDuration
+attr sr_backToKeepHeaderDuration
+attr sr_closeDuration
+attr sr_closeFooterDuration
+attr sr_closeHeaderDuration
+attr sr_content
+attr sr_enableKeep
+attr sr_enableLoadMore
+attr sr_enableOverScroll
+attr sr_enablePinContent
+attr sr_enablePullToRefresh
+attr sr_enableRefresh
+attr sr_maxMoveRatio
+attr sr_maxMoveRatioOfFooter
+attr sr_maxMoveRatioOfHeader
+attr sr_mode
+attr sr_ratioOfFooterToRefresh
+attr sr_ratioOfHeaderToRefresh
+attr sr_ratioToKeep
+attr sr_ratioToKeepFooter
+attr sr_ratioToKeepHeader
+attr sr_ratioToRefresh
+attr sr_resistance
+attr sr_resistanceOfFooter
+attr sr_resistanceOfHeader
+attr sr_stickyFooter
+attr sr_stickyHeader
+attr sr_style
+id mode_default
+id mode_scale
+id style_default
+id style_followCenter
+id style_followPin
+id style_followScale
+id style_pin
+id style_scale
+styleable IRefreshView sr_style
+styleable SmoothRefreshLayout android_enabled sr_backToKeepDuration sr_backToKeepFooterDuration sr_backToKeepHeaderDuration sr_closeDuration sr_closeFooterDuration sr_closeHeaderDuration sr_content sr_enableKeep sr_enableLoadMore sr_enableOverScroll sr_enablePinContent sr_enablePullToRefresh sr_enableRefresh sr_maxMoveRatio sr_maxMoveRatioOfFooter sr_maxMoveRatioOfHeader sr_mode sr_ratioOfFooterToRefresh sr_ratioOfHeaderToRefresh sr_ratioToKeep sr_ratioToKeepFooter sr_ratioToKeepHeader sr_ratioToRefresh sr_resistance sr_resistanceOfFooter sr_resistanceOfHeader sr_stickyFooter sr_stickyHeader
+styleable SmoothRefreshLayout_Layout android_layout_gravity

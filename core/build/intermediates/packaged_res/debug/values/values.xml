@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="enum" name="sr_style">
+        <enum name="style_default" value="0"/>
+        <enum name="style_scale" value="1"/>
+        <enum name="style_pin" value="2"/>
+        <enum name="style_followScale" value="3"/>
+        <enum name="style_followPin" value="4"/>
+        <enum name="style_followCenter" value="5"/>
+    </attr>
+    <declare-styleable name="IRefreshView">
+        <attr name="sr_style"/>
+    </declare-styleable>
+    <declare-styleable name="SmoothRefreshLayout">
+        <attr name="android:enabled"/>
+        <attr format="reference" name="sr_content"/>
+        <attr format="float" name="sr_resistance"/>
+        <attr format="float" name="sr_resistanceOfFooter"/>
+        <attr format="float" name="sr_resistanceOfHeader"/>
+        <attr format="float" name="sr_ratioToRefresh"/>
+        <attr format="float" name="sr_ratioOfHeaderToRefresh"/>
+        <attr format="float" name="sr_ratioOfFooterToRefresh"/>
+        <attr format="float" name="sr_ratioToKeep"/>
+        <attr format="float" name="sr_ratioToKeepHeader"/>
+        <attr format="float" name="sr_ratioToKeepFooter"/>
+        <attr format="float" name="sr_maxMoveRatio"/>
+        <attr format="float" name="sr_maxMoveRatioOfHeader"/>
+        <attr format="float" name="sr_maxMoveRatioOfFooter"/>
+        <attr format="integer" name="sr_closeDuration"/>
+        <attr format="integer" name="sr_closeHeaderDuration"/>
+        <attr format="integer" name="sr_closeFooterDuration"/>
+        <attr format="integer" name="sr_backToKeepDuration"/>
+        <attr format="integer" name="sr_backToKeepHeaderDuration"/>
+        <attr format="integer" name="sr_backToKeepFooterDuration"/>
+        <attr format="boolean" name="sr_enablePullToRefresh"/>
+        <attr format="boolean" name="sr_enableKeep"/>
+        <attr format="boolean" name="sr_enableOverScroll"/>
+        <attr format="boolean" name="sr_enablePinContent"/>
+        <attr format="boolean" name="sr_enableRefresh"/>
+        <attr format="boolean" name="sr_enableLoadMore"/>
+        <attr format="reference" name="sr_stickyHeader"/>
+        <attr format="reference" name="sr_stickyFooter"/>
+        <attr format="enum" name="sr_mode">
+            <enum name="mode_default" value="0"/>
+            <enum name="mode_scale" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SmoothRefreshLayout_Layout">
+        <attr name="android:layout_gravity"/>
+    </declare-styleable>
+</resources>
