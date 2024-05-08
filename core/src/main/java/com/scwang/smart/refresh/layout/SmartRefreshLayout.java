@@ -759,12 +759,14 @@ public class SmartRefreshLayout extends ViewGroup implements NestedScrollingPare
      * @param listener Listener
      */
     public void addOnUIPositionChangedListener(@NonNull OnUIPositionChangedListener listener) {
-        if (mUIPositionChangedListeners == null) {
-            mUIPositionChangedListeners = new ArrayList<>();
-            mUIPositionChangedListeners.add(listener);
-        } else if (!mUIPositionChangedListeners.contains(listener)) {
-            mUIPositionChangedListeners.add(listener);
-        }
+        mUIPositionChangedListeners = new ArrayList<>();
+        mUIPositionChangedListeners.add(listener);
+//        if (mUIPositionChangedListeners == null) {
+//            mUIPositionChangedListeners = new ArrayList<>();
+//            mUIPositionChangedListeners.add(listener);
+//        } else if (!mUIPositionChangedListeners.contains(listener)) {
+//            mUIPositionChangedListeners.add(listener);
+//        }
     }
 
     /**
