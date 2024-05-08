@@ -24,8 +24,10 @@
  */
 package me.dkzwm.widget.srl;
 
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+
 /** @author dkzwm */
-public abstract class RefreshingListenerAdapter implements SmoothRefreshLayout.OnRefreshListener {
+public abstract class RefreshingListenerAdapter implements SmartRefreshLayout.OnRefreshListener {
     @Override
     public void onRefreshing() {}
 

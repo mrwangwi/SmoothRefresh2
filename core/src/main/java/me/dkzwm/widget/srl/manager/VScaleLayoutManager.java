@@ -30,7 +30,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import me.dkzwm.widget.srl.annotation.Orientation;
 import me.dkzwm.widget.srl.config.Constants;
 import me.dkzwm.widget.srl.extra.IRefreshView;
@@ -38,17 +38,17 @@ import me.dkzwm.widget.srl.indicator.IIndicator;
 import me.dkzwm.widget.srl.util.ScrollCompat;
 import me.dkzwm.widget.srl.util.ViewCatcherUtil;
 
-public class VScaleLayoutManager extends SmoothRefreshLayout.LayoutManager {
+public class VScaleLayoutManager extends SmartRefreshLayout.LayoutManager {
     protected float mMaxScaleFactor = 1.2f;
 
     @Override
     @Orientation
     public int getOrientation() {
-        return SmoothRefreshLayout.LayoutManager.VERTICAL;
+        return SmartRefreshLayout.LayoutManager.VERTICAL;
     }
 
     @Override
-    public void setLayout(SmoothRefreshLayout layout) {
+    public void setLayout(SmartRefreshLayout layout) {
         super.setLayout(layout);
         setHeaderHeight(100000);
         setFooterHeight(100000);
@@ -77,7 +77,7 @@ public class VScaleLayoutManager extends SmoothRefreshLayout.LayoutManager {
     @Override
     public void layoutHeaderView(@NonNull IRefreshView<IIndicator> header) {
         header.getView().layout(0, 0, 0, 0);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): header: %s %s %s %s", 0, 0, 0, 0));
         }
     }
@@ -85,21 +85,21 @@ public class VScaleLayoutManager extends SmoothRefreshLayout.LayoutManager {
     @Override
     public void layoutFooterView(@NonNull IRefreshView<IIndicator> footer) {
         footer.getView().layout(0, 0, 0, 0);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): footer: %s %s %s %s", 0, 0, 0, 0));
         }
     }
 
     @Override
     public void layoutContentView(@NonNull View content) {
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) content.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) content.getLayoutParams();
         final int left = mLayout.getPaddingLeft() + lp.leftMargin;
         final int right = left + content.getMeasuredWidth();
         final int top = mLayout.getPaddingTop() + lp.topMargin;
         final int bottom = top + content.getMeasuredHeight();
         content.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): content: %s %s %s %s", left, top, right, bottom));
         }
     }
@@ -107,7 +107,7 @@ public class VScaleLayoutManager extends SmoothRefreshLayout.LayoutManager {
     @Override
     public void layoutStickyHeaderView(@NonNull View stickyHeader) {
         stickyHeader.layout(0, 0, 0, 0);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): stickyHeader: %s %s %s %s", 0, 0, 0, 0));
         }
     }
@@ -115,7 +115,7 @@ public class VScaleLayoutManager extends SmoothRefreshLayout.LayoutManager {
     @Override
     public void layoutStickyFooterView(@NonNull View stickyFooter) {
         stickyFooter.layout(0, 0, 0, 0);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): stickyFooter: %s %s %s %s", 0, 0, 0, 0));
         }
     }

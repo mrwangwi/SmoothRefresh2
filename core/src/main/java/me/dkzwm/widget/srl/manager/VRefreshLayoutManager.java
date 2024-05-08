@@ -35,20 +35,20 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import me.dkzwm.widget.srl.annotation.Orientation;
 import me.dkzwm.widget.srl.extra.IRefreshView;
 import me.dkzwm.widget.srl.indicator.IIndicator;
 import me.dkzwm.widget.srl.util.ViewCatcherUtil;
 
-public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
+public class VRefreshLayoutManager extends SmartRefreshLayout.LayoutManager {
     protected int mContentEnd;
     protected Paint mBackgroundPaint;
     protected int mHeaderBackgroundColor = Color.TRANSPARENT;
     protected int mFooterBackgroundColor = Color.TRANSPARENT;
 
     @Override
-    public void setLayout(SmoothRefreshLayout layout) {
+    public void setLayout(SmartRefreshLayout layout) {
         super.setLayout(layout);
         if (layout != null) {
             layout.setWillNotDraw(mBackgroundPaint == null);
@@ -58,7 +58,7 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
     @Override
     @Orientation
     public int getOrientation() {
-        return SmoothRefreshLayout.LayoutManager.VERTICAL;
+        return SmartRefreshLayout.LayoutManager.VERTICAL;
     }
 
     @Override
@@ -69,16 +69,16 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         }
         final View child = header.getView();
         final IIndicator indicator = mLayout.getIndicator();
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) header.getView().getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) header.getView().getLayoutParams();
         int height = header.getCustomHeight();
         if (header.getStyle() == IRefreshView.STYLE_DEFAULT
                 || header.getStyle() == IRefreshView.STYLE_PIN
                 || header.getStyle() == IRefreshView.STYLE_FOLLOW_CENTER
                 || header.getStyle() == IRefreshView.STYLE_FOLLOW_PIN) {
             if (height <= 0) {
-                if (height == SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
-                    lp.height = SmoothRefreshLayout.LayoutParams.MATCH_PARENT;
+                if (height == SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
+                    lp.height = SmartRefreshLayout.LayoutParams.MATCH_PARENT;
                 }
             } else {
                 lp.height = height;
@@ -86,11 +86,11 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
             measureChildWithMargins(child, widthMeasureSpec, heightMeasureSpec);
             setHeaderHeight(child.getMeasuredHeight() + lp.topMargin + lp.bottomMargin);
         } else {
-            if (height <= 0 && height != SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
+            if (height <= 0 && height != SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
                 throw new IllegalArgumentException(
                         "If header view type is STYLE_SCALE or STYLE_FOLLOW_SCALE, you must set a accurate height");
             } else {
-                if (height == SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
+                if (height == SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
                     int specSize = View.MeasureSpec.getSize(heightMeasureSpec);
                     height =
                             Math.max(
@@ -151,16 +151,16 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         }
         final View child = footer.getView();
         final IIndicator indicator = mLayout.getIndicator();
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) footer.getView().getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) footer.getView().getLayoutParams();
         int height = footer.getCustomHeight();
         if (footer.getStyle() == IRefreshView.STYLE_DEFAULT
                 || footer.getStyle() == IRefreshView.STYLE_PIN
                 || footer.getStyle() == IRefreshView.STYLE_FOLLOW_CENTER
                 || footer.getStyle() == IRefreshView.STYLE_FOLLOW_PIN) {
             if (height <= 0) {
-                if (height == SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
-                    lp.height = SmoothRefreshLayout.LayoutParams.MATCH_PARENT;
+                if (height == SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
+                    lp.height = SmartRefreshLayout.LayoutParams.MATCH_PARENT;
                 }
             } else {
                 lp.height = height;
@@ -168,11 +168,11 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
             measureChildWithMargins(child, widthMeasureSpec, heightMeasureSpec);
             setFooterHeight(child.getMeasuredHeight() + lp.topMargin + lp.bottomMargin);
         } else {
-            if (height <= 0 && height != SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
+            if (height <= 0 && height != SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
                 throw new IllegalArgumentException(
                         "If footer view type is STYLE_SCALE or STYLE_FOLLOW_SCALE, you must set a accurate height");
             } else {
-                if (height == SmoothRefreshLayout.LayoutParams.MATCH_PARENT) {
+                if (height == SmartRefreshLayout.LayoutParams.MATCH_PARENT) {
                     int specSize = View.MeasureSpec.getSize(heightMeasureSpec);
                     height =
                             Math.max(
@@ -230,13 +230,13 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         final View child = header.getView();
         if (mLayout.isDisabledRefresh() || child.getMeasuredHeight() == 0) {
             child.layout(0, 0, 0, 0);
-            if (SmoothRefreshLayout.sDebug) {
+            if (SmartRefreshLayout.sDebug) {
                 Log.d(TAG, String.format("onLayout(): header: %s %s %s %s", 0, 0, 0, 0));
             }
             return;
         }
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) child.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) child.getLayoutParams();
         final IIndicator indicator = mLayout.getIndicator();
         int left, right, top = 0, bottom;
         switch (header.getStyle()) {
@@ -302,7 +302,7 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         if (mLayout.isInEditMode()) top = top + child.getMeasuredHeight();
         bottom = top + child.getMeasuredHeight();
         child.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): header: %s %s %s %s", left, top, right, bottom));
         }
     }
@@ -312,13 +312,13 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         final View child = footer.getView();
         if (mLayout.isDisabledLoadMore() || child.getMeasuredHeight() == 0) {
             child.layout(0, 0, 0, 0);
-            if (SmoothRefreshLayout.sDebug) {
+            if (SmartRefreshLayout.sDebug) {
                 Log.d(TAG, String.format("onLayout(): footer: %s %s %s %s", 0, 0, 0, 0));
             }
             return;
         }
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) child.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) child.getLayoutParams();
         final IIndicator indicator = mLayout.getIndicator();
         int left, right, top = 0, bottom;
         int translationY = 0;
@@ -390,21 +390,21 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
         if (mLayout.isInEditMode()) top = top - child.getMeasuredHeight();
         bottom = top + child.getMeasuredHeight();
         child.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): footer: %s %s %s %s", left, top, right, bottom));
         }
     }
 
     @Override
     public void layoutContentView(@NonNull View content) {
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) content.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) content.getLayoutParams();
         final int left = mLayout.getPaddingLeft() + lp.leftMargin;
         final int right = left + content.getMeasuredWidth();
         final int top = mLayout.getPaddingTop() + lp.topMargin;
         final int bottom = top + content.getMeasuredHeight();
         content.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(TAG, String.format("onLayout(): content: %s %s %s %s", left, top, right, bottom));
         }
         mContentEnd = bottom + lp.bottomMargin;
@@ -412,14 +412,14 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
 
     @Override
     public void layoutStickyHeaderView(@NonNull View stickyHeader) {
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) stickyHeader.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) stickyHeader.getLayoutParams();
         final int left = mLayout.getPaddingLeft() + lp.leftMargin;
         final int right = left + stickyHeader.getMeasuredWidth();
         final int top = mLayout.getPaddingTop() + lp.topMargin;
         final int bottom = top + stickyHeader.getMeasuredHeight();
         stickyHeader.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(
                     TAG,
                     String.format(
@@ -429,14 +429,14 @@ public class VRefreshLayoutManager extends SmoothRefreshLayout.LayoutManager {
 
     @Override
     public void layoutStickyFooterView(@NonNull View stickyFooter) {
-        final SmoothRefreshLayout.LayoutParams lp =
-                (SmoothRefreshLayout.LayoutParams) stickyFooter.getLayoutParams();
+        final SmartRefreshLayout.LayoutParams lp =
+                (SmartRefreshLayout.LayoutParams) stickyFooter.getLayoutParams();
         final int left = mLayout.getPaddingLeft() + lp.leftMargin;
         final int right = left + stickyFooter.getMeasuredWidth();
         final int bottom = mContentEnd - lp.bottomMargin;
         final int top = bottom - stickyFooter.getMeasuredHeight();
         stickyFooter.layout(left, top, right, bottom);
-        if (SmoothRefreshLayout.sDebug) {
+        if (SmartRefreshLayout.sDebug) {
             Log.d(
                     TAG,
                     String.format(

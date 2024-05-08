@@ -29,7 +29,7 @@ import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import me.dkzwm.widget.srl.indicator.IIndicator;
 
 /** @author dkzwm */
@@ -92,53 +92,53 @@ public interface IRefreshView<T extends IIndicator> {
     /**
      * This method will be triggered when the touched finger is lifted.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
+     * @param layout The layout {@link SmartRefreshLayout}
      * @param indicator The indicator {@link IIndicator}
      */
-    void onFingerUp(SmoothRefreshLayout layout, T indicator);
+    void onFingerUp(SmartRefreshLayout layout, T indicator);
 
     /**
      * This method will be triggered when the refresh state is reset to {@link
-     * SmoothRefreshLayout#SR_STATUS_INIT}.
+     * SmartRefreshLayout#SR_STATUS_INIT}.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
+     * @param layout The layout {@link SmartRefreshLayout}
      */
-    void onReset(SmoothRefreshLayout layout);
+    void onReset(SmartRefreshLayout layout);
 
     /**
      * This method will be triggered when the frame is ready to refreshing.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
+     * @param layout The layout {@link SmartRefreshLayout}
      */
-    void onRefreshPrepare(SmoothRefreshLayout layout);
+    void onRefreshPrepare(SmartRefreshLayout layout);
 
     /**
      * This method will be triggered when the frame begin to refresh.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
+     * @param layout The layout {@link SmartRefreshLayout}
      * @param indicator The indicator {@link IIndicator}
      */
-    void onRefreshBegin(SmoothRefreshLayout layout, T indicator);
+    void onRefreshBegin(SmartRefreshLayout layout, T indicator);
 
     /**
      * This method will be triggered when the frame is refresh completed.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
+     * @param layout The layout {@link SmartRefreshLayout}
      * @param isSuccessful The layout refresh state
      */
-    void onRefreshComplete(SmoothRefreshLayout layout, boolean isSuccessful);
+    void onRefreshComplete(SmartRefreshLayout layout, boolean isSuccessful);
 
     /**
      * This method will be triggered when the position of the refresh view changes.
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
-     * @param status Current status @see{@link SmoothRefreshLayout#SR_STATUS_INIT}, {@link
-     *     SmoothRefreshLayout#SR_STATUS_PREPARE}, {@link SmoothRefreshLayout#SR_STATUS_REFRESHING},
-     *     {@link SmoothRefreshLayout#SR_STATUS_LOADING_MORE}, {@link
-     *     SmoothRefreshLayout#SR_STATUS_COMPLETE}.
+     * @param layout The layout {@link SmartRefreshLayout}
+     * @param status Current status @see{@link SmartRefreshLayout#SR_STATUS_INIT}, {@link
+     *     SmartRefreshLayout#SR_STATUS_PREPARE}, {@link SmartRefreshLayout#SR_STATUS_REFRESHING},
+     *     {@link SmartRefreshLayout#SR_STATUS_LOADING_MORE}, {@link
+     *     SmartRefreshLayout#SR_STATUS_COMPLETE}.
      * @param indicator The indicator {@link IIndicator}
      */
-    void onRefreshPositionChanged(SmoothRefreshLayout layout, byte status, T indicator);
+    void onRefreshPositionChanged(SmartRefreshLayout layout, byte status, T indicator);
 
     /**
      * Before the transaction of the refresh view has not yet been processed completed. This method
@@ -146,14 +146,14 @@ public interface IRefreshView<T extends IIndicator> {
      *
      * <p>Since version 1.4.6
      *
-     * @param layout The layout {@link SmoothRefreshLayout}
-     * @param status Current status @see{@link SmoothRefreshLayout#SR_STATUS_INIT}, {@link
-     *     SmoothRefreshLayout#SR_STATUS_PREPARE}, {@link SmoothRefreshLayout#SR_STATUS_REFRESHING},
-     *     {@link SmoothRefreshLayout#SR_STATUS_LOADING_MORE}, {@link
-     *     SmoothRefreshLayout#SR_STATUS_COMPLETE}.
+     * @param layout The layout {@link SmartRefreshLayout}
+     * @param status Current status @see{@link SmartRefreshLayout#SR_STATUS_INIT}, {@link
+     *     SmartRefreshLayout#SR_STATUS_PREPARE}, {@link SmartRefreshLayout#SR_STATUS_REFRESHING},
+     *     {@link SmartRefreshLayout#SR_STATUS_LOADING_MORE}, {@link
+     *     SmartRefreshLayout#SR_STATUS_COMPLETE}.
      * @param indicator The indicator {@link IIndicator}
      */
-    void onPureScrollPositionChanged(SmoothRefreshLayout layout, byte status, T indicator);
+    void onPureScrollPositionChanged(SmartRefreshLayout layout, byte status, T indicator);
 
     @IntDef({TYPE_HEADER, TYPE_FOOTER})
     @Retention(RetentionPolicy.SOURCE)

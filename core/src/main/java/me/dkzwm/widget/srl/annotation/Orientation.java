@@ -27,8 +27,8 @@ package me.dkzwm.widget.srl.annotation;
 import androidx.annotation.IntDef;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 
-@IntDef({SmoothRefreshLayout.LayoutManager.HORIZONTAL, SmoothRefreshLayout.LayoutManager.VERTICAL})
+@IntDef({SmartRefreshLayout.LayoutManager.HORIZONTAL, SmartRefreshLayout.LayoutManager.VERTICAL})
 @Retention(RetentionPolicy.SOURCE)
 public @interface Orientation {}

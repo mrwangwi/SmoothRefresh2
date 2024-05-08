@@ -24,9 +24,11 @@
  */
 package me.dkzwm.widget.srl;
 
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+
 /** @author dkzwm */
 public interface ILifecycleObserver {
-    void onAttached(SmoothRefreshLayout layout);
+    void onAttached(SmartRefreshLayout layout);
 
-    void onDetached(SmoothRefreshLayout layout);
+    void onDetached(SmartRefreshLayout layout);
 }

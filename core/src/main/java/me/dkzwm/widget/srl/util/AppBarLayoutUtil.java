@@ -27,13 +27,13 @@ package me.dkzwm.widget.srl.util;
 import android.view.View;
 import androidx.annotation.Nullable;
 import com.google.android.material.appbar.AppBarLayout;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import me.dkzwm.widget.srl.extra.IRefreshView;
 
 /** @author dkzwm */
 public class AppBarLayoutUtil
-        implements SmoothRefreshLayout.OnHeaderEdgeDetectCallBack,
-                SmoothRefreshLayout.OnFooterEdgeDetectCallBack {
+        implements SmartRefreshLayout.OnHeaderEdgeDetectCallBack,
+                SmartRefreshLayout.OnFooterEdgeDetectCallBack {
     private AppBarLayout mAppBarLayout;
     private boolean mFullyExpanded;
     private boolean mFullyCollapsed;
@@ -62,7 +62,7 @@ public class AppBarLayoutUtil
 
     @Override
     public boolean isNotYetInEdgeCannotMoveHeader(
-            SmoothRefreshLayout parent, @Nullable View child, @Nullable IRefreshView header) {
+            SmartRefreshLayout parent, @Nullable View child, @Nullable IRefreshView header) {
         if (child == null) {
             if (parent.isVerticalOrientation()) {
                 return !mFullyExpanded;
@@ -80,7 +80,7 @@ public class AppBarLayoutUtil
 
     @Override
     public boolean isNotYetInEdgeCannotMoveFooter(
-            SmoothRefreshLayout parent, @Nullable View child, @Nullable IRefreshView footer) {
+            SmartRefreshLayout parent, @Nullable View child, @Nullable IRefreshView footer) {
         if (child == null) {
             if (parent.isVerticalOrientation()) {
                 return !mFullyCollapsed;

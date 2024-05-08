@@ -24,12 +24,14 @@
  */
 package me.dkzwm.widget.srl;
 
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+
 import me.dkzwm.widget.srl.extra.IRefreshView;
 import me.dkzwm.widget.srl.indicator.IIndicator;
 
 /** @author dkzwm */
 public interface IRefreshViewCreator {
-    IRefreshView<IIndicator> createHeader(SmoothRefreshLayout layout);
+    IRefreshView<IIndicator> createHeader(SmartRefreshLayout layout);
 
-    IRefreshView<IIndicator> createFooter(SmoothRefreshLayout layout);
+    IRefreshView<IIndicator> createFooter(SmartRefreshLayout layout);
 }

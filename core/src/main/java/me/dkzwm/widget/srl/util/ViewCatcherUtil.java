@@ -27,7 +27,7 @@ package me.dkzwm.widget.srl.util;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import me.dkzwm.widget.srl.SmoothRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import me.dkzwm.widget.srl.extra.IRefreshView;
 
 /** @author dkzwm */
@@ -92,7 +92,7 @@ public class ViewCatcherUtil {
         return sClassOfCoordinatorLayout.isAssignableFrom(view.getClass());
     }
 
-    public static View catchAppBarLayout(final SmoothRefreshLayout group) {
+    public static View catchAppBarLayout(final SmartRefreshLayout group) {
         if ((sIsCaughtCoordinatorLayout || sIsCaughtAppBarLayout)
                 && (sClassOfCoordinatorLayout == null || sClassOfAppBarLayout == null)) {
             return null;
