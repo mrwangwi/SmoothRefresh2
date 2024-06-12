@@ -786,17 +786,15 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
     }
 
     @Override
-    public void onPullingDown(ReboundLayout refreshLayout, float fraction) {
+    public void onPullingDown(ReboundLayout refreshLayout, float fraction, float offset) {
         mHeadView.onPullingDown(fraction, mMaxHeadHeight, mHeadHeight);
-        if (!enableRefresh) return;
-        if (refreshListener != null) refreshListener.onPullingDown(refreshLayout, fraction);
+        if (refreshListener != null) refreshListener.onPullingDown(refreshLayout, fraction, offset);
     }
 
     @Override
-    public void onPullingUp(ReboundLayout refreshLayout, float fraction) {
+    public void onPullingUp(ReboundLayout refreshLayout, float fraction, float offset) {
         mBottomView.onPullingUp(fraction, mMaxHeadHeight, mHeadHeight);
-        if (!enableLoadmore) return;
-        if (refreshListener != null) refreshListener.onPullingUp(refreshLayout, fraction);
+        if (refreshListener != null) refreshListener.onPullingUp(refreshLayout, fraction, offset);
     }
 
     @Override
@@ -1109,11 +1107,11 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         }
 
         public void onPullingDown(float offsetY) {
-            pullListener.onPullingDown(ReboundLayout.this, offsetY / mHeadHeight);
+            pullListener.onPullingDown(ReboundLayout.this, offsetY / mHeadHeight, offsetY);
         }
 
         public void onPullingUp(float offsetY) {
-            pullListener.onPullingUp(ReboundLayout.this, offsetY / mBottomHeight);
+            pullListener.onPullingUp(ReboundLayout.this, offsetY / mBottomHeight, offsetY);
         }
 
         public void onRefresh() {
