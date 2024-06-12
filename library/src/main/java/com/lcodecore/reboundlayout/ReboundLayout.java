@@ -73,6 +73,10 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
     //底部layout
     private FrameLayout mBottomLayout;
 
+    private boolean enablePullDown;
+
+    private boolean enablePullUp;
+
 
     //是否刷新视图可见
     protected boolean isRefreshVisible = false;
@@ -142,6 +146,8 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
             mOverScrollHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_overscroll_height, (int) (mHeadHeight / 3 * 2));
             enableRefresh = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_enable_refresh, false);
             enableLoadmore = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_enable_loadmore, false);
+            enablePullDown = a.getBoolean(R.styleable.TwinklingRefreshLayout_enable_pull_down, true);
+            enablePullUp = a.getBoolean(R.styleable.TwinklingRefreshLayout_enable_pull_up, true);
             isPureScrollModeOn = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_pureScrollMode_on, false);
             isOverScrollTopShow = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_overscroll_top_show, true);
             isOverScrollBottomShow = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_overscroll_bottom_show, true);
@@ -1050,6 +1056,14 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
 
         public boolean enableLoadmore() {
             return enableLoadmore;
+        }
+
+        public boolean enablePullDown() {
+            return enablePullDown;
+        }
+
+        public boolean enablePullUp() {
+            return enablePullUp;
         }
 
         public boolean allowOverScroll() {
