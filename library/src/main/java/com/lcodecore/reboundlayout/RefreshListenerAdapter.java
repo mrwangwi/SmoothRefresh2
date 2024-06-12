@@ -10,11 +10,11 @@ public abstract class RefreshListenerAdapter implements PullListener {
     }
 
     @Override
-    public void onPullDownReleasing(ReboundLayout refreshLayout, float fraction) {
+    public void onPullDownReleasing(ReboundLayout refreshLayout, float fraction, float offset) {
     }
 
     @Override
-    public void onPullUpReleasing(ReboundLayout refreshLayout, float fraction) {
+    public void onPullUpReleasing(ReboundLayout refreshLayout, float fraction, float offset) {
     }
 
     @Override

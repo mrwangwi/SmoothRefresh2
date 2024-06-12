@@ -20,12 +20,12 @@ public interface PullListener {
      * @param refreshLayout
      * @param fraction
      */
-    void onPullDownReleasing(ReboundLayout refreshLayout, float fraction);
+    void onPullDownReleasing(ReboundLayout refreshLayout, float fraction, float offset);
 
     /**
      * 上拉松开
      */
-    void onPullUpReleasing(ReboundLayout refreshLayout, float fraction);
+    void onPullUpReleasing(ReboundLayout refreshLayout, float fraction, float offset);
 
     /**
      * 刷新中。。。

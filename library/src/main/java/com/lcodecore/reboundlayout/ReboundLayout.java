@@ -798,17 +798,17 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
     }
 
     @Override
-    public void onPullDownReleasing(ReboundLayout refreshLayout, float fraction) {
+    public void onPullDownReleasing(ReboundLayout refreshLayout, float fraction, float offset) {
         mHeadView.onPullReleasing(fraction, mMaxHeadHeight, mHeadHeight);
-        if (!enableRefresh) return;
-        if (refreshListener != null) refreshListener.onPullDownReleasing(refreshLayout, fraction);
+        if (refreshListener != null)
+            refreshListener.onPullDownReleasing(refreshLayout, fraction, offset);
     }
 
     @Override
-    public void onPullUpReleasing(ReboundLayout refreshLayout, float fraction) {
+    public void onPullUpReleasing(ReboundLayout refreshLayout, float fraction, float offset) {
         mBottomView.onPullReleasing(fraction, mMaxBottomHeight, mBottomHeight);
-        if (!enableLoadmore) return;
-        if (refreshListener != null) refreshListener.onPullUpReleasing(refreshLayout, fraction);
+        if (refreshListener != null)
+            refreshListener.onPullUpReleasing(refreshLayout, fraction, offset);
     }
 
     @Override
@@ -1131,11 +1131,11 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         }
 
         public void onPullDownReleasing(float offsetY) {
-            pullListener.onPullDownReleasing(ReboundLayout.this, offsetY / mHeadHeight);
+            pullListener.onPullDownReleasing(ReboundLayout.this, offsetY / mHeadHeight, offsetY);
         }
 
         public void onPullUpReleasing(float offsetY) {
-            pullListener.onPullUpReleasing(ReboundLayout.this, offsetY / mBottomHeight);
+            pullListener.onPullUpReleasing(ReboundLayout.this, offsetY / mBottomHeight, offsetY);
         }
 
         public boolean dispatchTouchEventSuper(MotionEvent ev) {
