@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven-publish'
 
 android {
     compileSdk 33
@@ -26,4 +26,18 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.4.1'
     compileOnly "androidx.recyclerview:recyclerview:1.1.0-beta04"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.mrwangwi'
+                artifactId = 'ReboundLayout'
+                version = '1.0'
+            }
+        }
+    }
 }
