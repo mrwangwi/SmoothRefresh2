@@ -1057,6 +1057,24 @@ attr topInsetScrimEnabled
 attr touchAnchorId
 attr touchAnchorSide
 attr touchRegionId
+attr tr_autoLoadMore
+attr tr_bottomView
+attr tr_bottom_height
+attr tr_enable_keepIView
+attr tr_enable_loadmore
+attr tr_enable_overscroll
+attr tr_enable_refresh
+attr tr_floatRefresh
+attr tr_head_height
+attr tr_headerView
+attr tr_max_bottom_height
+attr tr_max_head_height
+attr tr_overscroll_bottom_show
+attr tr_overscroll_height
+attr tr_overscroll_top_show
+attr tr_pureScrollMode_on
+attr tr_showLoadingWhenOverScroll
+attr tr_showRefreshingWhenOverScroll
 attr track
 attr trackColor
 attr trackColorActive
@@ -1120,6 +1138,10 @@ bool m3_sys_typescale_title_large_text_all_caps
 bool m3_sys_typescale_title_medium_text_all_caps
 bool m3_sys_typescale_title_small_text_all_caps
 bool mtrl_btn_textappearance_all_caps
+color Blue
+color Green
+color Orange
+color Yellow
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2377,6 +2399,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable anim_loading_view
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -2392,6 +2415,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_arrow
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2593,6 +2617,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id draweeView
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -2603,6 +2628,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id ex_header
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2645,6 +2671,8 @@ id item2
 id item3
 id item4
 id item_touch_helper_previous_elevation
+id iv_arrow
+id iv_loading
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2754,6 +2782,9 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id ripple
+id round1
+id round2
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2867,6 +2898,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv
 id unchecked
 id uniform
 id unlabeled
@@ -3056,10 +3088,25 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout view_bezier
+layout view_sinaheader
 menu example_menu
 menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap refresh_head_arrow
+mipmap refresh_loading01
+mipmap refresh_loading02
+mipmap refresh_loading03
+mipmap refresh_loading04
+mipmap refresh_loading05
+mipmap refresh_loading06
+mipmap refresh_loading07
+mipmap refresh_loading08
+mipmap refresh_loading09
+mipmap refresh_loading10
+mipmap refresh_loading11
+mipmap refresh_loading12
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -4351,6 +4398,7 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable Tooltip android_textAppearance android_textColor android_padding android_layout_margin android_minWidth android_minHeight android_text backgroundTint
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation
 styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable transitionFlags
+styleable TwinklingRefreshLayout tr_autoLoadMore tr_bottomView tr_bottom_height tr_enable_keepIView tr_enable_loadmore tr_enable_overscroll tr_enable_refresh tr_floatRefresh tr_head_height tr_headerView tr_max_bottom_height tr_max_head_height tr_overscroll_bottom_show tr_overscroll_height tr_overscroll_top_show tr_pureScrollMode_on tr_showLoadingWhenOverScroll tr_showRefreshingWhenOverScroll
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode

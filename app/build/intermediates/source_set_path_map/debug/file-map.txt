@@ -27,3 +27,4 @@ com.jx.watchos.smartrefresh.app-merged_res-25 F:\SmartRefresh2\app\build\interme
 com.jx.watchos.smartrefresh.app-debug-26 F:\SmartRefresh2\app\src\debug\res
 com.jx.watchos.smartrefresh.app-main-27 F:\SmartRefresh2\app\src\main\res
 com.jx.watchos.smartrefresh.app-packaged_res-28 F:\SmartRefresh2\core\build\intermediates\packaged_res\debug
+com.jx.watchos.smartrefresh.app-packaged_res-29 F:\SmartRefresh2\library\build\intermediates\packaged_res\debug

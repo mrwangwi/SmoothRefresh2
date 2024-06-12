@@ -5,6 +5,7 @@ INJECTED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Administrator\.gradle\caches\transforms-3\598c05c81fe9254b4832878dd4a0db6b\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
+MERGED from [:library] F:\SmartRefresh2\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrator\.gradle\caches\transforms-3\820228e30f636f55c4409e009616b836\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Administrator\.gradle\caches\transforms-3\c9231f61ffc2ed8722bea521977306ff\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [:core] F:\SmartRefresh2\core\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -67,6 +68,8 @@ application
 ADDED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Administrator\.gradle\caches\transforms-3\598c05c81fe9254b4832878dd4a0db6b\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Administrator\.gradle\caches\transforms-3\598c05c81fe9254b4832878dd4a0db6b\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
+MERGED from [:library] F:\SmartRefresh2\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-13:19
+MERGED from [:library] F:\SmartRefresh2\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-13:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrator\.gradle\caches\transforms-3\820228e30f636f55c4409e009616b836\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrator\.gradle\caches\transforms-3\820228e30f636f55c4409e009616b836\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\4b580972190c9e236a669c6a1f1f8a9e\transformed\emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
@@ -121,6 +124,8 @@ INJECTED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml
 INJECTED from F:\SmartRefresh2\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Administrator\.gradle\caches\transforms-3\598c05c81fe9254b4832878dd4a0db6b\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Administrator\.gradle\caches\transforms-3\598c05c81fe9254b4832878dd4a0db6b\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [:library] F:\SmartRefresh2\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:library] F:\SmartRefresh2\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrator\.gradle\caches\transforms-3\820228e30f636f55c4409e009616b836\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrator\.gradle\caches\transforms-3\820228e30f636f55c4409e009616b836\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Administrator\.gradle\caches\transforms-3\c9231f61ffc2ed8722bea521977306ff\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
