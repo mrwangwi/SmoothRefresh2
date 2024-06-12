@@ -96,7 +96,7 @@ public class OverScrollDecorator extends Decorator {
         mGravityScroller.fling(0, 0, 0, (int) mVelocityY, Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
         float finalY = mGravityScroller.getFinalY();
         if (Math.abs(mVelocityY) >= OVER_SCROLL_MIN_VX) {
-            heightVelocityListener.setHeightVelocity(Math.abs(finalY / 20));
+            heightVelocityListener.setHeightVelocity(Math.abs(finalY / 5));
             mHandler.sendEmptyMessage(MSG_START_COMPUTE_SCROLL);
             checkOverScroll = true;
         } else {

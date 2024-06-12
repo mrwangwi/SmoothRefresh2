@@ -59,7 +59,7 @@ public class RippleView extends View {
         if (va == null) {
             int bigRadius = (int) (Math.sqrt(Math.pow(getHeight(), 2) + Math.pow(getWidth(), 2)));
             va = ValueAnimator.ofInt(0, bigRadius / 2);
-            va.setDuration(bigRadius);
+            va.setDuration(bigRadius* 3L);
             va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {

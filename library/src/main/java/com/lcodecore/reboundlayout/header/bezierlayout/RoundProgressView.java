@@ -53,7 +53,7 @@ public class RoundProgressView extends View {
         mPath.setColor(Color.rgb(114, 114, 114));
 
         va = ValueAnimator.ofInt(0, 360);
-        va.setDuration(720);
+        va.setDuration(3000);
         va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0484a29d-e2c6-459d-bcf9-92c6c04ff515" name="Changes" comment="ww">
+    <list default="true" id="0484a29d-e2c6-459d-bcf9-92c6c04ff515" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,17 +18,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/ReboundLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/ReboundLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/RefreshProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/RefreshProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/res/values/attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/Footer/BallPulseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/Footer/BallPulseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/GoogleDotView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/GoogleDotView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/BezierLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/BezierLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RippleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RippleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RoundProgressView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RoundProgressView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/progresslayout/MaterialProgressDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/progresslayout/MaterialProgressDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/AnimProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/AnimProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/OverScrollDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/processor/OverScrollDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[87426293769855]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,7 +68,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory" />
-    <property name="DEBUGGABLE_DEVICE" value="s26-s26-79805344411258" />
+    <property name="DEBUGGABLE_DEVICE" value="s26-s26-87426293769855" />
     <property name="DEBUGGABLE_PROCESS" value="com.jx.watchos.smartrefresh" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -81,12 +85,15 @@
     <property name="android-custom-viewF:/SmartRefresh2/core/src/main/java/me/dkzwm/widget/srl/SmartRefresh.java_SELECTED" value="SmartRefresh" />
     <property name="android-custom-viewF:/SmartRefresh2/core/src/main/java/me/dkzwm/widget/srl/SmoothRefreshLayout.java_SELECTED" value="SmartRefreshLayout" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/Footer/BallPulseView.java_SELECTED" value="BallPulseView" />
+    <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/Footer/LoadingView.java_SELECTED" value="LoadingView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/ReboundLayout.java_SELECTED" value="ReboundLayout" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/TwinklingRefreshLayout.java_SELECTED" value="ReboundLayout" />
+    <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/GoogleDotView.java_SELECTED" value="GoogleDotView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/SinaRefreshView.java_SELECTED" value="SinaRefreshView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/BezierLayout.java_SELECTED" value="BezierLayout" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RippleView.java_SELECTED" value="RippleView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RoundDotView.java_SELECTED" value="RoundDotView" />
+    <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/RoundProgressView.java_SELECTED" value="RoundProgressView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/bezierlayout/WaveView.java_SELECTED" value="WaveView" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/reboundlayout/header/progresslayout/ProgressLayout.java_SELECTED" value="ProgressLayout" />
     <property name="android-custom-viewF:/SmartRefresh2/library/src/main/java/com/lcodecore/tkrefreshlayout/Footer/BallPulseView.java_SELECTED" value="BallPulseView" />
@@ -275,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718178126404</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ww">
+      <created>1718180159425</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718180159425</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -319,6 +333,11 @@
           <url>file://$PROJECT_DIR$/core/src/main/java/com/scwang/smart/refresh/layout/SmartRefreshLayout.java</url>
           <line>4177</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/library/src/main/java/com/lcodecore/reboundlayout/header/GoogleDotView.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -136,7 +136,7 @@ public class BezierLayout extends FrameLayout implements IHeaderView {
             }
         });
         waveAnimator.setInterpolator(new DecelerateInterpolator());
-        waveAnimator.setDuration(800);
+        waveAnimator.setDuration(8000);
         waveAnimator.start();
         /*处理圈圈进度条**/
         circleAnimator = ValueAnimator.ofFloat(1, 0);
@@ -167,7 +167,7 @@ public class BezierLayout extends FrameLayout implements IHeaderView {
 
         });
         circleAnimator.setInterpolator(new DecelerateInterpolator());
-        circleAnimator.setDuration(300);
+        circleAnimator.setDuration(3000);
         circleAnimator.start();
     }
 

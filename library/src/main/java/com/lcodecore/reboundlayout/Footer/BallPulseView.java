@@ -140,7 +140,7 @@ public class BallPulseView extends View implements IBottomView {
 
             ValueAnimator scaleAnim = ValueAnimator.ofFloat(1, 0.3f, 1);
 
-            scaleAnim.setDuration(750);
+            scaleAnim.setDuration(3000);
             scaleAnim.setRepeatCount(ValueAnimator.INFINITE);
             scaleAnim.setStartDelay(delays[i]);
 

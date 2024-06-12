@@ -56,7 +56,7 @@ public class GoogleDotView extends View implements IHeaderView {
         mPath.setColor(Color.rgb(114, 114, 114));
 
         animator1 = ValueAnimator.ofFloat(1f, 1.2f, 1f, 0.8f);
-        animator1.setDuration(800);
+        animator1.setDuration(3000);
         animator1.setInterpolator(new DecelerateInterpolator());
         animator1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -69,7 +69,7 @@ public class GoogleDotView extends View implements IHeaderView {
         animator1.setRepeatMode(ValueAnimator.REVERSE);
 
         animator2 = ValueAnimator.ofFloat(1f, 0.8f, 1f, 1.2f);
-        animator2.setDuration(800);
+        animator2.setDuration(3000);
         animator2.setInterpolator(new DecelerateInterpolator());
         animator2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override

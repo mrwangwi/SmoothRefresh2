@@ -68,7 +68,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     private static final float START_TRIM_DURATION_OFFSET = 0.5f;
 
     /** The duration of a single progress spin in milliseconds. */
-    private static final int ANIMATION_DURATION = 1332;
+    private static final int ANIMATION_DURATION = 3000;
 
     /** The number of points in the progress "star". */
     private static final float NUM_POINTS = 5f;
@@ -264,7 +264,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         // Already showing some part of the ring
         if (mRing.getEndTrim() != mRing.getStartTrim()) {
             mFinishing = true;
-            mAnimation.setDuration(ANIMATION_DURATION/2);
+            mAnimation.setDuration(ANIMATION_DURATION);
             mParent.startAnimation(mAnimation);
         } else {
             mRing.setColorIndex(0);

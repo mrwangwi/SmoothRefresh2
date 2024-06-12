@@ -499,9 +499,9 @@ public class AnimProcessor implements IAnimRefresh, IAnimOverScroll {
         va.setInterpolator(new DecelerateInterpolator());
         va.addUpdateListener(listener);
         va.addListener(animatorListener);
-        va.setDuration(time);
+        va.setDuration((long) (time * 2.5f));
         va.start();
-//        offerToQueue(va);
+        //offerToQueue(va);
     }
 
     public void animLayoutByTime(int start, int end, long time, AnimatorUpdateListener listener) {
@@ -510,7 +510,7 @@ public class AnimProcessor implements IAnimRefresh, IAnimOverScroll {
         va.addUpdateListener(listener);
         va.setDuration(time);
         va.start();
-//        offerToQueue(va);
+        //offerToQueue(va);
     }
 
     public void animLayoutByTime(int start, int end, AnimatorUpdateListener listener, AnimatorListener animatorListener) {
@@ -518,9 +518,9 @@ public class AnimProcessor implements IAnimRefresh, IAnimOverScroll {
         va.setInterpolator(new DecelerateInterpolator());
         va.addUpdateListener(listener);
         va.addListener(animatorListener);
-        va.setDuration((int) (Math.abs(start - end) * animFraction * 3));
+        va.setDuration((int) (Math.abs(start - end) * animFraction * 8));
         va.start();
-//        offerToQueue(va);
+        //offerToQueue(va);
     }
 
     //just for test.
