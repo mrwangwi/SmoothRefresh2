@@ -46,6 +46,8 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
 
     //允许的越界回弹的高度
     protected float mOverScrollHeight;
+    //允许的越界回弹的高度动态
+    protected float mOverScrollHeightVelocity;
 
     //子控件
     private View mChildView;
@@ -137,7 +139,7 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
             mHeadHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_head_height, (int) DensityUtil.dp2px(context, 180));
             mMaxBottomHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_max_bottom_height, (int) DensityUtil.dp2px(context, 240));
             mBottomHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_bottom_height, (int) DensityUtil.dp2px(context, 180));
-            mOverScrollHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_overscroll_height, (int) mHeadHeight);
+            mOverScrollHeight = a.getDimensionPixelSize(R.styleable.TwinklingRefreshLayout_tr_overscroll_height, (int) (mHeadHeight / 3 * 2));
             enableRefresh = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_enable_refresh, false);
             enableLoadmore = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_enable_loadmore, false);
             isPureScrollModeOn = a.getBoolean(R.styleable.TwinklingRefreshLayout_tr_pureScrollMode_on, false);
@@ -231,7 +233,7 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         mChildView = getChildAt(3);
 
         cp.init();
-        decorator = new OverScrollDecorator(cp, new RefreshProcessor(cp));
+        decorator = new OverScrollDecorator(cp, new RefreshProcessor(cp), heightVelocity -> mOverScrollHeightVelocity = heightVelocity);
         initGestureDetector();
     }
 
@@ -918,7 +920,7 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         }
 
         public int getOsHeight() {
-            return (int) mOverScrollHeight;
+            return (int) Math.min(mOverScrollHeight, mOverScrollHeightVelocity);
         }
 
         public View getTargetView() {

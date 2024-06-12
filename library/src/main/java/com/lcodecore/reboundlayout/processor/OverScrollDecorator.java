@@ -1,9 +1,12 @@
 package com.lcodecore.reboundlayout.processor;
 
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.Scroller;
 
 import com.lcodecore.reboundlayout.ReboundLayout;
 import com.lcodecore.reboundlayout.utils.ScrollingUtil;
@@ -18,7 +21,7 @@ public class OverScrollDecorator extends Decorator {
     private float mVelocityY;
 
     //满足越界的手势的最低速度(默认3000)
-    private static final int OVER_SCROLL_MIN_VX = 3000;
+    private static final int OVER_SCROLL_MIN_VX = 500;
 
     //针对View的延时策略
     private static final int MSG_START_COMPUTE_SCROLL = 0; //开始计算
@@ -28,8 +31,13 @@ public class OverScrollDecorator extends Decorator {
     private int cur_delay_times = 0; //当前计算次数
     private static final int ALL_DELAY_TIMES = 60;  //10ms计算一次,总共计算20次
 
-    public OverScrollDecorator(ReboundLayout.CoContext processor, IDecorator decorator1) {
+    private final Scroller mGravityScroller;
+    private OverScrollHeightVelocityListener heightVelocityListener;
+
+    public OverScrollDecorator(ReboundLayout.CoContext processor, IDecorator decorator1, OverScrollHeightVelocityListener heightVelocityListener) {
         super(processor, decorator1);
+        this.heightVelocityListener = heightVelocityListener;
+        mGravityScroller = new Scroller(processor.getTargetView().getContext(), new DecelerateInterpolator());
     }
 
 
@@ -85,16 +93,20 @@ public class OverScrollDecorator extends Decorator {
         if (dy > cp.getTouchSlop() && preventTopOverScroll) return;//控件滚动在顶部且向下fling
 
         mVelocityY = velocityY;
+        mGravityScroller.fling(0, 0, 0, (int) mVelocityY, Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        float finalY = mGravityScroller.getFinalY();
         if (Math.abs(mVelocityY) >= OVER_SCROLL_MIN_VX) {
+            heightVelocityListener.setHeightVelocity(Math.abs(finalY / 20));
             mHandler.sendEmptyMessage(MSG_START_COMPUTE_SCROLL);
             checkOverScroll = true;
         } else {
+            heightVelocityListener.setHeightVelocity(0);
             mVelocityY = 0;
             cur_delay_times = ALL_DELAY_TIMES;
         }
     }
 
-    private Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler(Looper.myLooper()) {
 
         @Override
         public void handleMessage(Message msg) {
@@ -133,4 +145,9 @@ public class OverScrollDecorator extends Decorator {
             }
         }
     };
+
+
+    public interface OverScrollHeightVelocityListener {
+        void setHeightVelocity(float heightVelocity);
+    }
 }
