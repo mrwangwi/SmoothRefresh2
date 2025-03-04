@@ -77,6 +77,9 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
 
     private boolean enablePullUp;
 
+    private EnablePullUpListener enablePullUpListener;
+    private EnablePullDownListener enablePullDownListener;
+
 
     //是否刷新视图可见
     protected boolean isRefreshVisible = false;
@@ -1059,10 +1062,16 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         }
 
         public boolean enablePullDown() {
+            if (enablePullDownListener != null) {
+                return enablePullDownListener.enable();
+            }
             return enablePullDown;
         }
 
         public boolean enablePullUp() {
+            if (enablePullUpListener != null) {
+                return enablePullUpListener.enable();
+            }
             return enablePullUp;
         }
 
@@ -1200,5 +1209,21 @@ public class ReboundLayout extends RelativeLayout implements PullListener, Neste
         public void setPrepareFinishLoadMore(boolean prepareFinishLoadMore) {
             this.prepareFinishLoadMore = prepareFinishLoadMore;
         }
+    }
+
+    public interface EnablePullUpListener{
+        boolean enable();
+    }
+
+    public interface EnablePullDownListener{
+        boolean enable();
+    }
+
+    public void setEnablePullUpListener(EnablePullUpListener enablePullUpListener) {
+        this.enablePullUpListener = enablePullUpListener;
+    }
+
+    public void setEnablePullDownListener(EnablePullDownListener enablePullDownListener) {
+        this.enablePullDownListener = enablePullDownListener;
     }
 }
